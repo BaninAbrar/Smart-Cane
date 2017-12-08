@@ -1,8 +1,8 @@
     /**
     *Smart Cane
     *Programmers: Salmaan Khan, Banin Abrar, Iram Rahman
-    *Professor: The one, the only, Paul Andrew Solomon Ward the magnificent, the trustworthy, the benevolent
-    *This program will run on our Omega 2 and it will run multiple commands when certain buttons are pressed
+    *
+    *This program will run on Omega 2 and it will run multiple commands when certain buttons are pressed
     *such as turn on LEDs, display date and time, and work as a stopwatch
     */
 
@@ -40,7 +40,8 @@
         "July", "August", "September", "October", "November", "December"
       };
 
-      //I could tell you what this does, but I'd rather not
+      //print current date
+      
       static char result[26];
       sprintf(result, "%.10s %.8s%3d %d\n",
         wday_name[timeptr->tm_wday],
@@ -51,6 +52,7 @@
     }
 
     //function for printing out the current time
+    
     char* timee(const struct tm *timeptr)
     {
       static char result[26];
@@ -66,47 +68,35 @@
 
       //Requesting all pins
 
-      //request pin 0
+
       gpio_request (0,NULL);
 
-      //request pin 1
       gpio_request (1,NULL);
 
-      //request pin 2
       gpio_request (2,NULL);
 
-      //request pin 7
       gpio_request (7,NULL);
 
-      //request pin 3
       gpio_request (3,NULL);
 
-      //request pin 9
       gpio_request (9,NULL);
 
 
-      //Setting direction for the pins
+     //Setting direction for the pins
 
-      //set direction for pin 0
+      
       gpio_direction_input(0);
-
-      //set the direction for pin 1
       gpio_direction_input(1);
-
-      //set the direction for pin 7
       gpio_direction_input(7);
-
-      //set the direction for pin 3
       gpio_direction_input(3);
-
-      //set the direction for pin 9
       gpio_direction_input(9);
 
-
-      //setting one pin as the output
+    //setting one pin as the output
+      
       gpio_direction_output(2,0);
 
     //declares integer variables that will store the values read in by all the pins
+    
     int gpio0;
     int gpio1;
     int gpio7;
@@ -114,6 +104,7 @@
     int gpio9;
 
     //declares and initializes the boolean variables that are used to check if buttons have been pressed
+    
     bool temp = false;
     bool temp2 = false;
     bool temp3 = false;
@@ -147,19 +138,14 @@
 
       //reading value from all input pins
 
-      //gets value from pin 0
       gpio0=gpio_get_value(0);
 
-      //gets value from pin 1
       gpio1=gpio_get_value(1);
 
-      //gets value from pin 7
       gpio7=gpio_get_value(7);
 
-      //gets value from pin 3
       gpio3=gpio_get_value(3);
 
-      //gets value from pin 9
       gpio9=gpio_get_value(9);
 
       /*if input on pin 0 is active
@@ -310,23 +296,12 @@
     }
 
     //frees the Pins
-
-    //frees pin 0
-    gpio_free(0);
-
-    //frees pin 1
+    
+    gpio_free(0);  
     gpio_free(1);
-
-    //frees pin 2
     gpio_free(2);
-
-    //frees pin 3
     gpio_free(3);
-
-    //frees pin 7
     gpio_free(7);
-
-    //frees pin 9
     gpio_free(9);
 
     return 0;

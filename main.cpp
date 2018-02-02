@@ -17,6 +17,7 @@
     #include <cstdlib>
     #include <ugpio/ugpio.h>
     #include <time.h>       /* time_t, struct tm, time, localtime */
+    #include "distance.c" //pulsein() for distance calculation
 
     using namespace std;
 

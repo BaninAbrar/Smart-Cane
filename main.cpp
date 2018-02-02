@@ -15,7 +15,7 @@
     #include <iostream>
     #include <ctime>
     #include <cstdlib>
-    #include <ugpio/ugpio.h>
+    #include <ugpio/ugpio.h> //Omega2 gpio lib
     #include <time.h>       /* time_t, struct tm, time, localtime */
     #include "distance.c" //pulsein() for distance calculation
 

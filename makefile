@@ -1,7 +1,7 @@
 # main compiler
 CXX := g++
 
-TARGET1 := finalcode
+TARGET1 := main
 
 all: $(TARGET1)
 

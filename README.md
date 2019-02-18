@@ -1,4 +1,4 @@
-# Smart-Cane IoT (C++)
+# GeekCane IoT (C++)
 
 ## Dependencies
 **Onion Omega2** IoT Board<br>**Arduino UNO** for Ultrasonic Probing
